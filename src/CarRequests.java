@@ -4,7 +4,7 @@ public class CarRequests {
         q = new Queue<>();
         
     }
-    public void addRequests(int x){
+    public void addRequest(int x){
         q.enqueue(x);
      
     }
@@ -19,7 +19,7 @@ public class CarRequests {
             return true;
         }
     }
-    public void printer(){
-        System.out.println(q);
-    }
+//     public void printer(){
+//         System.out.println(q);
+//     }
 }

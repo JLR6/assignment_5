@@ -28,10 +28,9 @@ public class CarLot {
     }
     public ArrayList<Car> processRequests(CarRequests cr){
         ArrayList<Car> c = new ArrayList<Car>();
-        Car reg = new Car(0, 0, 0);
+        Car reg = new Car(0, 0, 0.0f);
         while (cr.hasPendingRequests()){
             int g =cr.getRequest();
-        
             if (g==1){
                 if(gasolineCar.isEmpty()==false){
                     c.add(gasolineCar.dequeue());
@@ -39,7 +38,6 @@ public class CarLot {
                 else{
                     c.add(reg);
                 }
-                
             }
             else if (g==2){
                 if(hybridCar.isEmpty()==false){
@@ -66,6 +64,6 @@ public class CarLot {
         return c;
     }
     public void printer(){
-        System.out.println("Gasoline Car: " + gasolineCar + "\n" + "Hybrid Car: " + hybridCar + "\n" + "Electric Car: "+ electricCar);
+        System.out.println("Gasoline Car:\n " + gasolineCar.toString() + "\n" + "Hybrid Car:\n " + hybridCar.toString() + "\n" + "Electric Car:\n "+ electricCar.toString());
     }
 }

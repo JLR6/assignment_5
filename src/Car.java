@@ -2,7 +2,7 @@ public class Car{
     private int id;
     private int powerSource;
     private float pricePerDay;
-    public Car(int i, int p, int ppd){
+    public Car(int i, int p, float ppd){
         this.id =i;
         this.powerSource = p;
         this.pricePerDay = ppd;
@@ -13,10 +13,7 @@ public class Car{
     }
 
     public void setId(int id) {
-        if(id>0 && id<4){
-            this.id = id;
-        }
-        
+            this.id=id;
     }
 
     public int getPowerSource() {
@@ -24,18 +21,24 @@ public class Car{
     }
 
     public void setPowerSource(int powerSource) {
-        this.powerSource = powerSource;
+        if(powerSource >0 && powerSource<4){
+            this.powerSource = powerSource;
+        }
+        else{
+            this.powerSource =0;
+        }
+       
     }
 
     public float getPricePerDay() {
         return this.pricePerDay;
     }
 
-    public void setPricePerDay(double pricePerDay) {
-        this.pricePerDay = (float)pricePerDay;
+    public void setPricePerDay(float pricePerDay) {
+        this.pricePerDay = pricePerDay;
     }
     public String toString(){
-        return "Id: " + this.id; 
+        return "Id: " + this.id + " power source: " + this.powerSource + " price per day: " + this.pricePerDay; 
     }
 
 }

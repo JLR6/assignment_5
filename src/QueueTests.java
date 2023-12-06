@@ -3,22 +3,22 @@ import static org.junit.Assert.assertEquals;
 
 public class QueueTests {
     @Test
-    public void cons(){
+    public void Queue(){
         Queue<Car> q = new Queue<>();
         assertEquals(true, q.isEmpty());
     }
 
     @Test
-    public void adder(){
-        Car c = new Car(0, 0 ,0);
+    public void enqueue(){
+        Car c = new Car(0, 0 ,0.0f);
         Queue<Car> q = new Queue<>();
         q.enqueue(c);
         assertEquals(c, q.dequeue());
     }
 
     @Test
-    public void dequ(){
-        Car c = new Car(0, 0 ,0);
+    public void dequeue(){
+        Car c = new Car(0, 0 ,0.0f);
         Queue<Car> q = new Queue<>();
         q.enqueue(c);
         q.dequeue();
@@ -26,9 +26,9 @@ public class QueueTests {
     }
 
     @Test
-    public void dequ1(){
-        Car c = new Car(0, 0 ,0);
-        Car c1 = new Car(1, 0, 0);
+    public void dequeue1(){
+        Car c = new Car(0, 0 ,0.0f);
+        Car c1 = new Car(1, 0, 0.0f);
         Queue<Car> q = new Queue<>();
         q.enqueue(c);
         q.enqueue(c1);
@@ -37,9 +37,9 @@ public class QueueTests {
     }
 
     @Test
-    public void peekTest(){
-        Car c = new Car(0, 0 ,0);
-        Car c1 = new Car(1, 0, 0);
+    public void peek(){
+        Car c = new Car(0, 0 ,0.0f);
+        Car c1 = new Car(1, 0, 0.0f);
         Queue<Car> q = new Queue<>();
         q.enqueue(c);
         q.enqueue(c1);
@@ -47,9 +47,9 @@ public class QueueTests {
     }
 
     @Test
-    public void empty(){
-        Car c = new Car(0, 0 ,0);
-        Car c1 = new Car(1, 0, 0);
+    public void isEmpty(){
+        Car c = new Car(0, 0 ,0.0f);
+        Car c1 = new Car(1, 0, 0.0f);
         Queue<Car> q = new Queue<>();
         q.enqueue(c);
         q.enqueue(c1);
@@ -57,9 +57,9 @@ public class QueueTests {
     }
 
     @Test
-    public void empty1(){
-        Car c = new Car(0, 0 ,0);
-        Car c1 = new Car(1, 0, 0);
+    public void isEmpty1(){
+        Car c = new Car(0, 0 ,0.0f);
+        Car c1 = new Car(1, 0, 0.0f);
         Queue<Car> q = new Queue<>();
         q.enqueue(c);
         q.enqueue(c1);

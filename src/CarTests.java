@@ -4,41 +4,41 @@ import static org.junit.Assert.assertEquals;
 
 public class CarTests {
     @Test
-    public void cons(){
-        Car c = new Car(0, 0, 0);
+    public void Car(){
+        Car c = new Car(0, 1, 0.0f);
         assertEquals(c.getId(), 0);
     }
     @Test
-    public void id(){
-        Car c = new Car(4, 0, 0);
+    public void getId(){
+        Car c = new Car(4, 1, 0.0f);
         assertEquals(c.getId(), 4);;
     }
     @Test
-    public void idSet(){
-        Car c = new Car(4, 0, 0);
+    public void setId(){
+        Car c = new Car(4, 2, 0.0f);
         c.setId(2);
         assertEquals(c.getId(), 2);
     }
     @Test
-    public void power(){
-        Car c = new Car(4, 5, 0);
-        assertEquals(c.getPowerSource(), 5);
+    public void getPowerSource(){
+        Car c = new Car(4, 3, 0.11f);
+        assertEquals(c.getPowerSource(), 3);
     }
     @Test
-    public void powerSet(){
-        Car c = new Car(4, 5, 0);
+    public void setPowerSource(){
+        Car c = new Car(4, 2, 0.23f);
         c.setPowerSource(6);
-        assertEquals(c.getPowerSource(), 6);
+        assertEquals(c.getPowerSource(), 0);
     }
     @Test
-    public void ppd(){
-        Car c = new Car(4, 5, 9);
-        assertEquals(c.getPricePerDay(), 9f, 0.01);
+    public void getPricePerDay(){
+        Car c = new Car(4, 1, 9.1f);
+        assertEquals(c.getPricePerDay(), 9.1f, 0.01);
     }
     @Test
-    public void ppdSet(){
-        Car c = new Car(4, 5, 0);
-        c.setPricePerDay(6.34);
+    public void setPricePerDay(){
+        Car c = new Car(4, 2, 0.12f);
+        c.setPricePerDay(6.34f);
         assertEquals(c.getPricePerDay(), 6.34f, 0.01);
     }
 }
