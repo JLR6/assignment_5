@@ -10,15 +10,15 @@ public class CarLot {
         electricCar = new Queue<>();
     }
     public boolean addCar(Car c){
-        if(c.getId()==1){
+        if(c.getPowerSource()==1){
             gasolineCar.enqueue(c);
             return true;
         }
-        else if (c.getId()==2){
+        else if (c.getPowerSource()==2){
             hybridCar.enqueue(c);
             return true;
         }
-        else if (c.getId()==3){
+        else if (c.getPowerSource()==3){
             electricCar.enqueue(c);
             return true;
         }
